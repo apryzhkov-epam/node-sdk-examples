@@ -1,0 +1,14 @@
+{
+  "name": "hyperwallet-sdk-examples",
+  "version": "0.3.0",
+  "description": "Hyperwallet note sdk examples",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "hyperwallet-sdk": "file:../node-sdk"
+  }
+}
