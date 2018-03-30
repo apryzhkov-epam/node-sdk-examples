@@ -5,7 +5,7 @@ var username = process.argv[2];
 var password = process.argv[3];
 var programToken = process.argv[4] || "prg-44a64920-45fc-4578-a7f9-e14813b3ed54";
 var userToken = process.argv[5] || "usr-0fb6d624-f18d-480d-b1e7-f48f534bbd75";
-var cardNumber = process.argv[6] || "4216701111102221";
+var bankCardToken = process.argv[6] || "trm-4b3d6b2b-8959-4e19-b9dc-1e0b923bbbb3";
 
 var client = new Hyperwallet({
     username: username,
@@ -13,10 +13,6 @@ var client = new Hyperwallet({
     programToken: programToken,
 });
 
-client.createBankCard(userToken, {
-    "type":"BANK_CARD",
-    "cardNumber": cardNumber,
-    "dateOfExpiry":"2020-01",
-    "transferMethodCountry":"US",
-    "transferMethodCurrency":"USD"
+client.createBankCardStatusTransition(userToken, bankCardToken, {
+    transition: "DE_ACTIVATED"
 }, Utils.printResponse);
