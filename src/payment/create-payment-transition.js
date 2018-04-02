@@ -13,5 +13,5 @@ var client = new Hyperwallet({
 });
 
 client.createPaymentStatusTransition(paymentToken, {
-    transition: "DE_ACTIVATED"
+    transition: "CANCELLED"
 }, Utils.printResponse);
